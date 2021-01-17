@@ -7,20 +7,39 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding:0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media only screen and (max-width:570px) {
+    html {
+        font-size: 37.5%;
+    }
+}
+
+@media only screen and (max-width:340px) {
+    html {
+        font-size: 25%;
+    }
 }
 
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
-    padding: 0.9rem;
+    padding: .9rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -34,19 +53,16 @@ body {
         url('../img/hero.jpg');
     background-size: cover;
     background-position: top;
-    overflow: hidden;
-    
 }
 
 
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: 0.9rem;
-    left: 0.9rem;
-
+    top: .9rem;
+    left: .9rem;
 }
 
-.logo {
+.header__logo {
     height: 2.7rem;
 
 }
@@ -56,23 +72,24 @@ body {
     position: absolute;
     width:0;
     height: 0;
-    bottom: 0;
-    border-bottom: 9rem solid white;
-    border-left: 90rem solid transparent;
-   
+    bottom: -.3rem;
+    border-bottom: 15vh solid white;
+    border-left: 100vw solid transparent;
 }
 
-.headder__primary {
+.headding--primary {
     color: white;
-    letter-spacing: 1.8rem;
+    letter-spacing: 2.3rem;
+    font-size: 6rem;
     text-transform: uppercase;
     font-weight: 400;
     animation: elm-left-to-right 2s ease-in;
 }
 
-.headder__secondary {
+.headding--secondary {
     color: white;
     letter-spacing: 0.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 700;
     animation: elm-right-to-left 2s ease-in;
@@ -111,29 +128,34 @@ body {
     }
 }
 
-.header__button {
+.btn {
     color: #777;
-    border-color: white;
     padding: 1.2rem;
     margin-top:0.9rem;
     border-radius: 15% / 50%;
     border-style: none;
+}
+
+btn--animated {
     animation: elm-to-top 1s linear;
-  
 }
 
-.header__button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+btn--white {
+    border-color: white;
+}
+
+.btn:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 
 }
 
-.header__button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+.btn:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 
 }
-.header__button:focus {
+.btn:focus {
     outline: none;
 }
 
