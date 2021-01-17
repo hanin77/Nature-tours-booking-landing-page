@@ -1,0 +1,14 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Natours app template",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css --watch"
+  },
+  "author": "Medhan",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
