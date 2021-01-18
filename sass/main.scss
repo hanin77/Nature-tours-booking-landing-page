@@ -12,6 +12,7 @@ $color-primary-light: #55c57a;
 $color-primary-dark: #28b485;
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 *,
 *::after,
@@ -19,7 +20,6 @@ $color-white: #fff;
     margin: 0;
     padding:0;
     box-sizing: inherit;
-
 }
 
 html {
@@ -59,29 +59,19 @@ body {
         url('../img/hero.jpg');
     background-size: cover;
     background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: .9rem;
+        left: .9rem;
+    }
+    
+    &__logo {
+        height: 7rem;
+    }
 }
 
-
-.header__logo-box {
-    position: absolute;
-    top: .9rem;
-    left: .9rem;
-}
-
-.header__logo {
-    height: 9rem;
-
-}
-
-.header::before {
-    content:'';
-    position: absolute;
-    width:0;
-    height: 0;
-    bottom: -.3rem;
-    border-bottom: 15vh solid $color-white;
-    border-left: 100vw solid transparent;
-}
 
 .headding--primary {
     color: $color-white;
@@ -140,29 +130,30 @@ body {
     margin-top:0.9rem;
     border-radius: 15% / 50%;
     border-style: none;
+
+    &--animated {
+        animation: elm-to-top 1s linear;
+    }
+    
+    &--white {
+        border-color: $color-white;
+        color: $color-grey-dark;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    }
+    
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 
-btn--animated {
-    animation: elm-to-top 1s linear;
-}
 
-btn--white {
-    border-color: $color-white;
-    color: $color-grey-dark;
-}
-
-.btn:hover {
-    transform: translateY(-.3rem);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-
-}
-
-.btn:active {
-    transform: translateY(-.1rem);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-
-}
-.btn:focus {
-    outline: none;
-}
 
