@@ -1,0 +1,29 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html {
+    //defines what rem is
+    font-size: 62.5%;
+}
+
+@media only screen and (max-width:570px) {
+    html {
+        font-size: 37.5%;
+    }
+}
+
+@media only screen and (max-width:340px) {
+    html {
+        font-size: 25%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}

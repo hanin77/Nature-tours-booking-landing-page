@@ -1,0 +1,27 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: .9rem;
+}
+
+.headding--primary {
+    color: $color-white;
+    letter-spacing: 2.3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    animation: elm-left-to-right 2s ease-in;
+}
+
+.headding--secondary {
+    color: $color-white;
+    letter-spacing: 0.5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    animation: elm-right-to-left 2s ease-in;
+}

@@ -1,0 +1,30 @@
+.btn {
+    color: $color-grey-dark;
+    padding: 2.3rem;
+    margin-top:0.9rem;
+    border-radius: 15% / 50%;
+    border-style: none;
+
+    &--animated {
+        animation: elm-to-top 1s linear;
+    }
+    
+    &--white {
+        border-color: $color-white;
+        color: $color-grey-dark;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    }
+    
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

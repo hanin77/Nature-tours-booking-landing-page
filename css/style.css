@@ -1,11 +1,27 @@
-/*
-COLORS:
+@keyframes elm-left-to-right {
+  from {
+    transform: translateX(-100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+@keyframes elm-right-to-left {
+  from {
+    transform: translateX(100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
 
-*/
+@keyframes elm-to-top {
+  from {
+    transform: translateY(75%);
+    opacity: 0; }
+  to {
+    transform: translateY(0%);
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -25,31 +41,15 @@ html {
     font-size: 25%; } }
 
 body {
+  box-sizing: border-box; }
+
+body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: .9rem;
-  box-sizing: border-box; }
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to bottom right, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: .9rem;
-    left: .9rem; }
-  .header__logo {
-    height: 7rem; }
+  padding: .9rem; }
 
 .headding--primary {
   color: #fff;
@@ -66,30 +66,6 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   animation: elm-right-to-left 2s ease-in; }
-
-@keyframes elm-left-to-right {
-  from {
-    transform: translateX(-100%);
-    opacity: 0; }
-  to {
-    transform: translateX(0%);
-    opacity: 1; } }
-
-@keyframes elm-right-to-left {
-  from {
-    transform: translateX(100%);
-    opacity: 0; }
-  to {
-    transform: translateX(0%);
-    opacity: 1; } }
-
-@keyframes elm-to-top {
-  from {
-    transform: translateY(100%);
-    opacity: 0; }
-  to {
-    transform: translateY(0%);
-    opacity: 1; } }
 
 .btn {
   color: #777;
@@ -110,3 +86,21 @@ body {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:focus {
     outline: none; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: .9rem;
+    left: .9rem; }
+  .header__logo {
+    height: 7rem; }
