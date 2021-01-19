@@ -1,33 +1,43 @@
-@keyframes elm-left-to-right {
-    from {
-        transform: translateX(-100%);
+@keyframes moveInLeft {
+    0% {
         opacity: 0;
+        transform: translateX(-10rem);
     }
-    to {
-        transform: translateX(0%);
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
         opacity: 1;
+        transform: translate(0);
     }
 }
 
-@keyframes elm-right-to-left {
-    from {
-        transform: translateX(100%);
+@keyframes moveInRight {
+    0% {
         opacity: 0;
+        transform: translateX(10rem);
     }
-    to {
-        transform: translateX(0%);
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
         opacity: 1;
+        transform: translate(0);
     }
 }
 
-@keyframes elm-to-top {
-    from {
-        transform: translateY(75%);
+@keyframes moveInBottom {
+    0% {
         opacity: 0;
+        transform: translateY(3rem);
     }
-    to {
-        transform: translateY(0%);
+
+    100% {
         opacity: 1;
+        transform: translate(0);
     }
 }
-
