@@ -19,6 +19,7 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem);
         position: relative;
+        overflow: hidden;
     }
 
     &__img {
